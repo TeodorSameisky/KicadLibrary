@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Passives")(type "KiCad")(uri "${KICAD_LIBRARY_DIR}/symbols/Passives.kicad_symdir")(options "")(descr "Passive components"))
+)

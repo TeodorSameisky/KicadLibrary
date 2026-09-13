@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+# KiCad sources are text and must diff properly.
+*.kicad_sym  text
+*.kicad_mod  text
+*.wrl        text
+
+# 3D models are binary. Not tracked by LFS yet -- see README before enabling,
+# since switching later requires rewriting history.
+*.step binary
+*.stp  binary
