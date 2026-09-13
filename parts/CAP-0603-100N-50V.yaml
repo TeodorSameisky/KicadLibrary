@@ -1,0 +1,15 @@
+ipn: CAP-0603-100N-50V
+description: Capacitor 100nF 50V X7R 0603
+status: approved
+
+symbol: Passives:C_0603
+footprint: Passives:C_0603_1608Metric
+
+fields:
+  Value: 100n
+  Voltage: 50V
+  Dielectric: X7R
+
+mpns:
+  - mpn: CL10B104KB8NNNC
+    preferred: true

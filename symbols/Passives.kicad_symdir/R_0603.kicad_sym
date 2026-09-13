@@ -2,9 +2,9 @@
 	(version 20251024)
 	(generator "kicad_symbol_editor")
 	(generator_version "10.0")
-	(symbol "C_0603_100N_50V"
-		(extends "C")
-		(property "Reference" "C"
+	(symbol "R_0603"
+		(extends "R")
+		(property "Reference" "R"
 			(at 2.032 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14,7 +14,7 @@
 				)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "R_0603"
 			(at 0 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24,7 +24,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Passives:C_0603_1608Metric"
+		(property "Footprint" "Passives:R_0603_1608Metric"
 			(at -1.778 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -35,7 +35,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL10B104KB8NNN.do"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46,7 +46,7 @@
 				)
 			)
 		)
-		(property "Description" "Capacitor 100nF 50V X7R 0603"
+		(property "Description" "Resistor, 0603 (1608 metric)"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57,18 +57,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL10B104KB8NNNC"
-			(at 0 0 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung"
+		(property "ki_keywords" "R res resistor 0603"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)

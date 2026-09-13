@@ -1,0 +1,19 @@
+ipn: RES-0603-10K-1P
+description: Resistor 10k 1% 0.1W 0603
+status: approved
+
+symbol: Passives:R_0603
+footprint: Passives:R_0603_1608Metric
+
+# Written into the symbol placed in KiCad.
+fields:
+  Value: 10k
+  Tolerance: 1%
+  Power: 0.1W
+
+# Approved sources. The preferred one is used where a single manufacturer
+# must be named; the rest are drop-in alternates.
+mpns:
+  - mpn: RC0603FR-0710KL
+    preferred: true
+  - mpn: CRCW060310K0FKEA

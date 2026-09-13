@@ -6,10 +6,31 @@ Remote Symbols panel by the KiCad Library Manager.
 ## Layout
 
 ```
+parts/<IPN>.yaml                                     internal part numbers
+mpns/<MPN>.yaml                                      manufacturer part numbers
+
 symbols/<Library>.kicad_symdir/<Symbol>.kicad_sym    one symbol per file
 footprints/<Library>.pretty/<Footprint>.kicad_mod    one footprint per file
 3dmodels/<Library>.3dshapes/<Model>.step             one model per footprint
 ```
+
+## Parts and manufacturer parts
+
+Only **IPNs** are placed in KiCad. An IPN is a container: it names a symbol and
+a footprint, carries the field values, and lists the approved manufacturer
+parts that satisfy it.
+
+```
+IPN  RES-0603-10K-1P  --+-- MPN  RC0603FR-0710KL   (Yageo, preferred)
+                        +-- MPN  CRCW060310K0FKEA  (Vishay)
+```
+
+MPNs are separate files rather than embedded in each IPN, because one MPN can
+serve several IPNs. When a manufacturer obsoletes a part you edit one file
+instead of hunting every IPN that references it.
+
+Approving an alternate source is a small, readable diff -- which is the point
+of keeping this in git.
 
 The three directories mirror each other by library name. `Passives` exists in
 all three, and that correspondence is what lets references resolve by lookup
@@ -35,10 +56,12 @@ R.kicad_sym               contains  (symbol "R" ...)   <- the graphics live here
 A derived symbol carries no graphics of its own, so it is only usable together
 with its parent.
 
-**Generic parent, specific children.** `R` and `C` define the drawing. Each
-orderable part extends one of them and overrides `Value`, `Footprint`, `MPN`
-and `Manufacturer`. Adding a new part is one small file, not a copy of the
-graphics.
+**Generic parent, package-specific children.** `R` and `C` define the drawing.
+`R_0603` extends `R` and binds a footprint. Symbols describe *shape and land
+pattern only* -- no manufacturer data, no values.
+
+Everything orderable lives in `parts/`. A second approved source is a change to
+one IPN file; it must never mean editing a symbol.
 
 **3D model references** use a variable and a repo-relative path:
 
@@ -72,8 +95,8 @@ forces everyone to re-clone.
 
 ## Example content
 
-The `Passives` library contains four example symbols demonstrating the
-inheritance pattern. Delete them once real content is imported.
+`Passives` contains four example symbols showing the inheritance pattern, plus
+two IPNs and three MPNs. Delete them once real content is imported.
 
 Footprints and 3D models are not included -- the example symbols reference
 footprints that do not exist yet, which the indexer reports as unresolved.

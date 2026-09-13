@@ -2,9 +2,9 @@
 	(version 20251024)
 	(generator "kicad_symbol_editor")
 	(generator_version "10.0")
-	(symbol "R_0603_10K_1P"
-		(extends "R")
-		(property "Reference" "R"
+	(symbol "C_0603"
+		(extends "C")
+		(property "Reference" "C"
 			(at 2.032 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14,7 +14,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "C_0603"
 			(at 0 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24,7 +24,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Passives:R_0603_1608Metric"
+		(property "Footprint" "Passives:C_0603_1608Metric"
 			(at -1.778 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -35,7 +35,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46,7 +46,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor 10k 1% 0.1W 0603"
+		(property "Description" "Unpolarized capacitor, 0603 (1608 metric)"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57,18 +57,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-0710KL"
-			(at 0 0 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Yageo"
+		(property "ki_keywords" "C cap capacitor 0603"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
