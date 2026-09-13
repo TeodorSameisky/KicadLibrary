@@ -1,0 +1,23 @@
+# IPN categories. An IPN is <category code>-<number>, e.g. 1102-0001.
+#
+# Codes are allocated here before parts can use them. Numbers within a
+# category are assigned sequentially by the library manager.
+
+- code: "1101"
+  name: Capacitors, fixed
+- code: "1102"
+  name: Resistors, fixed
+- code: "1103"
+  name: Inductors and ferrites
+- code: "1201"
+  name: Diodes
+- code: "1202"
+  name: Transistors
+- code: "1301"
+  name: Integrated circuits, analog
+- code: "1302"
+  name: Integrated circuits, digital
+- code: "1401"
+  name: Connectors
+- code: "1501"
+  name: Mechanical and hardware

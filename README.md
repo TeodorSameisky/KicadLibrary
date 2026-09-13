@@ -6,7 +6,8 @@ Remote Symbols panel by the KiCad Library Manager.
 ## Layout
 
 ```
-parts/<IPN>.yaml                                     internal part numbers
+categories.yaml                                      IPN category codes
+parts/<category>/<IPN>.yaml                          internal part numbers
 mpns/<MPN>.yaml                                      manufacturer part numbers
 
 symbols/<Library>.kicad_symdir/<Symbol>.kicad_sym    one symbol per file
@@ -21,9 +22,16 @@ a footprint, carries the field values, and lists the approved manufacturer
 parts that satisfy it.
 
 ```
-IPN  RES-0603-10K-1P  --+-- MPN  RC0603FR-0710KL   (Yageo, preferred)
-                        +-- MPN  CRCW060310K0FKEA  (Vishay)
+IPN  1102-0001  --+-- MPN  RC0603FR-0710KL   (Yageo, preferred)
+                  +-- MPN  CRCW060310K0FKEA  (Vishay)
 ```
+
+An IPN is `<category code>-<number>`. Categories are declared in
+`categories.yaml`; numbers are allocated sequentially within a category by the
+library manager, so nobody picks them by hand.
+
+Because the number carries no meaning, `description` and `fields` are what make
+a part findable. Fill them in properly.
 
 MPNs are separate files rather than embedded in each IPN, because one MPN can
 serve several IPNs. When a manufacturer obsoletes a part you edit one file
@@ -96,7 +104,9 @@ forces everyone to re-clone.
 ## Example content
 
 `Passives` contains four example symbols showing the inheritance pattern, plus
-two IPNs and three MPNs. Delete them once real content is imported.
+two IPNs and three MPNs. The category codes are placeholders.
+
+Delete all of it once the real library is imported.
 
 Footprints and 3D models are not included -- the example symbols reference
 footprints that do not exist yet, which the indexer reports as unresolved.
