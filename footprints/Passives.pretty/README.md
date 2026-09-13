@@ -2,6 +2,9 @@
 
 One `.kicad_mod` per footprint, filename matching the `(footprint "...")` name.
 
-Populate from the existing company library. The example symbols reference
-`Passives:R_0603_1608Metric` and `Passives:C_0603_1608Metric`; until those files
-exist the indexer will report them as unresolved.
+The two here are copied from KiCad's own library (CC-BY-SA 4.0 with the
+KiCad library exception) so the delivery path can be tested end to end. Their
+`(model ...)` references were rewritten to point at this repository rather
+than the KiCad installation.
+
+Replace them when the company library is imported.
